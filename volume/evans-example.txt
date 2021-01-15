@@ -1,0 +1,3 @@
+# An example to run evans client to use proto file to connect to a service.
+
+evans --host q-a-web-app_q_and_a_1 --port 5679 --proto qa-user-group.proto
