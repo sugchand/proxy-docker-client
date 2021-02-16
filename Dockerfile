@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 ENV PATH "$PATH:/usr/local/go/bin"
 RUN DEBIAN_FRONTEND=noninteractive apt update -y && \
-    DEBIAN_FRONTEND=noninteractive apt install -y build-essential make wget tar
+    DEBIAN_FRONTEND=noninteractive apt install -y build-essential make wget tar python3 dos2unix python3-venv
 RUN mkdir -p /usr/local && \
     wget -q https://golang.org/dl/go1.14.7.linux-amd64.tar.gz && \
     tar -xzf go1.14.7.linux-amd64.tar.gz -C /usr/local

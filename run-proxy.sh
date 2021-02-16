@@ -66,7 +66,7 @@ CmdRun()
 
     if [[ "${RUN}" -eq 1 ]] ; then
         echo "Running the proxy container"
-        cd ${SCRIPTPATH}; docker run -it ${NETWORK} -v ${PWD}/volume:/volume ${CONTAINERNAME} bash 
+        cd ${SCRIPTPATH}; docker run -it ${NETWORK} -v ${PWD}/volume:/volume ${CONTAINERNAME} /volume/run-report-gen.sh
     fi
 }
 
