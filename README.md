@@ -54,3 +54,7 @@ Please make sure the Q-A-Web-App services are up before running the command , so
 can reach the services to collect the data.
 
 The script will produce the csv report and send to the configured users.
+
+The script can be added to a cron job to run it specific interval.
+For eg: copy the 'cron-report-gen' to cron.daily or cron.hourly to run them in specific interval.
+
