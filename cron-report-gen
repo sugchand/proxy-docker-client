@@ -1,0 +1,2 @@
+#!/bin/bash
+/media/disk-2/repo/proxy-docker-container/run-proxy.sh -r -n q-a-web-app_qaNetwork >> /tmp/cron-report-gen.log
