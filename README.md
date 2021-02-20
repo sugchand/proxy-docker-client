@@ -40,9 +40,10 @@ $ ./run-proxy.sh -b
 $ cd volumes; git clone https://github.com/sugchand/Q-A-Web-App.git
 ```
 
-3. After cloning the repo, copy the Q-A-Web-Appp configuration file. This step is very important
-to make sure report generator will have same configuration as original Q-A-Web-App system.
-User may have to to copy '.env' and './config' directory to newely cloned repo.
+3. After cloning the repo, copy the Q-A-Web-Appp configuration from running app.
+This step is very important to make sure report generator will have same configuration
+as original Q-A-Web-App system. User may have to to copy '.env' and './config' directory
+to newely cloned repo.
 
 4. Run the container connecting to existing docker network as
 
@@ -53,8 +54,11 @@ User may have to to copy '.env' and './config' directory to newely cloned repo.
 Please make sure the Q-A-Web-App services are up before running the command , so that the script
 can reach the services to collect the data.
 
-The script will produce the csv report and send to the configured users.
+The script will produce the csv report and send to the users configured in the script.
 
 The script can be added to a cron job to run it specific interval.
-For eg: copy the 'cron-report-gen' to cron.daily or cron.hourly to run them in specific interval.
+An sample 'cron-report-gen' is provided in the repo, which run the script from the
+location '/media/disk-2/repo/proxy-docker-container/run-proxy.sh'. User may use this
+script in 'cron.daily' or 'cron.hourly' with right path to generate report at regular
+interval.
 
